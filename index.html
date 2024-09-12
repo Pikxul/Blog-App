@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Blog App</h1>
+
+    <!-- Blog List -->
+    <h2>Daily Blogs</h2>
+    <div id="blog-list"></div>
+
+    <!-- Blog Sections -->
+    <div class="sections-wrapper">
+      <!-- Add Blog Section -->
+      <div id="section-add" class="section">
+        <div id="addblog">
+          <form id="add-blog-form">
+            <textarea id="blog-content" placeholder="Enter blog content" required></textarea>
+            <input type="file" id="blog-media" accept="image/*,video/*">
+            <button type="submit">Add Blog Post</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Update Blog Section -->
+      <div id="section-update" class="section">
+        <div id="updateblog">
+        <form id="update-blog-form">
+          <input type="number" id="update-blog-id" placeholder="Enter blog ID" required>
+          <textarea id="update-blog-content" placeholder="Enter new blog content" required style="height: 65px;"></textarea>
+          <input type="file" id="update-blog-media" accept="image/*,video/*">
+          <button type="submit">Update Blog Post</button>
+        </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Delete Blog Section -->
+    <div id="section-delete" class="section" style="display: none;">
+      <h2>Delete Blog Post</h2>
+      <form id="delete-blog-form">
+        <input type="number" id="delete-blog-id" placeholder="Enter blog ID" required>
+        <button type="submit">Delete Blog Post</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
